@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assessment 3</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <h1 align="center">
+        DRIVING LICENSE ELIGIBILITY
+    </h1>
+    <div id="text"></div>
+        <script>
+            let date=new Array();
+            let names=new Array();
+            let age=new Array();     
+            let eligible=new Array();     
+           
+            var obj=new Date();             
+            for(var i=0;i<2;i++)
+            {
+                date[i]=obj.getDate()+"/"+obj.getMonth()+"/"+obj.getFullYear();
+                names[i]=prompt("enter your name:");
+                age[i]=prompt("enter your age:");
+                if(age[i]>=18)
+                {
+                    eligible[i]="Eligible for Driving License";
+                }
+                else
+                {
+                    eligible[i]="Not eligible for Driving License";
+                }
+            }
+            
+            var text=document.getElementById('text');
+            var table='<table><thead><tr><th>DATE</th><th>NAME</th><th>AGE</th><th>ELIGIBILITY</th></tr></thead><tbody>'; 
+            for(var i=0;i<2;i++)
+            {
+                table += '<tr><td>'+ date[i] + '</td><td>' + names[i] +'</td><td>'+age[i]+'</td><td>'+eligible[i]+'</td></tr>';
+            }
+            
+            
+            table+= '</tbody></table>'; 
+            text.innerHTML= table;
+
+        </script>
+    </table>
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+table{
+    padding-left:550px;
+    text-align: center;
+}
+
+th{
+    padding:20px;
+    border: 2px black solid;
+}
+td{
+    padding: 20px;
+    border: 2px black solid ;   
+}
